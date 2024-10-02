@@ -88,6 +88,9 @@ To design and implement a banking application that allows users to manage bank a
 #### 4. View All Accounts Page
 ![View All Accounts](Screenshots/view_all_accounts.png)
 
+#### 5. Account Operations
+![Account Operations](Screenshots/account_operations.png)
+
 ### Database Schema:
 
 - **Accounts Table**:
