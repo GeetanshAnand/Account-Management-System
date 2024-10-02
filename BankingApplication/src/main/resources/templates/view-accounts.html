@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Accounts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>All Accounts</h1>
+        <table id="accountsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Account Holder</th>
+                    <th>Balance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Accounts will be listed here -->
+            </tbody>
+        </table>
+        <a href="index.html" class="btn">Back to Home</a>
+    </div>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+            fetch("http://localhost:8081/api/accounts")
+                .then(response => response.json())
+                .then(data => {
+                    const accountsTableBody = document.querySelector("#accountsTable tbody");
+                    accountsTableBody.innerHTML = "";
+
+                    data.forEach(account => {
+                        const row = document.createElement("tr");
+
+                        row.innerHTML = `
+                            <td>${account.id}</td>
+                            <td>${account.accountHolderName}</td>
+                            <td>${account.balance}</td>
+                            <td>
+                                <a href="/account-operations?id=${account.id}" class="btn">Manage</a>
+                            </td>
+                        `;
+                        accountsTableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.log("Error fetching accounts:", error);
+                });
+        });
+    </script>
+</body>
+</html>
