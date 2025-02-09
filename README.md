@@ -108,14 +108,17 @@ This project is a **Account Management Syatem** built with **Spring Boot**. It p
 ### 2. Home Page
 ![Home Page](./screenshots/home_page.png)
 
-### 3. Account Operations Page
-![Account Operations Page](./screenshots/account_operations_page.png)
+### 3. Search Account Page
+![Account Operations Page](./screenshots/search_page.png)
 
 ### 4. Add Account Page
 ![Add Account Page](./screenshots/add_account_page.png)
 
 ### 5. View Accounts Page
 ![View Accounts Page](./screenshots/view_accounts_page.png)
+
+### 6. Account Operations Page
+![Account Operations Page](./screenshots/account_operations_page.png)
 
 ---
 
