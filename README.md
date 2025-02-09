@@ -1,6 +1,6 @@
-# Banking Application
+# Account Management System
 
-This project is a **Banking Application** built with **Spring Boot**. It provides a user-friendly interface for managing bank accounts, viewing account details, and performing basic banking operations. The project is designed with a responsive and modern UI, following a black-and-bluish artistic theme.
+This project is a **Account Management Syatem** built with **Spring Boot**. It provides a user-friendly interface for managing bank accounts, viewing account details, and performing basic banking operations. The project is designed with a responsive and modern UI, following a black-and-bluish artistic theme.
 
 ---
 
