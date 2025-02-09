@@ -1,158 +1,90 @@
-/* General Styles */
+/* Updated CSS for Navigation Bar, Container, and Footer */
+
 body {
     background-color: #121212; /* Dark background */
     color: #e0e0e0; /* Light text color */
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     line-height: 1.6;
     animation: fadeIn 0.5s ease-in; /* Add fade-in effect to the body */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #0f0f0f; /* Darker than main page */
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 20px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #5ca0f4; /* Lighter blue color */
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-menu a:hover {
+    color: #00ccff; /* Lighter blue on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .container {
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
     max-width: 700px;
-    margin: 0 auto;
     padding: 50px;
     border: 2px solid #3a7bd5;
     border-radius: 8px;
     background-color: rgba(18, 18, 18, 0.9);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease;
+    flex: 1;
 }
 
-/* Scale up the container on hover */
 .container:hover {
     transform: scale(1.02);
 }
 
-/* Headings */
-h1, h2, h3 {
-    color: #5ca0f4; /* Lighter blue color */
+h1, h2 {
+    color: #5ca0f4;
     text-align: center;
-    animation: slideIn 0.5s ease-out; /* Add slide-in effect */
+    animation: slideIn 0.5s ease-out;
 }
 
-/* Menu Bar */
-.menu-bar {
-    position: relative;
-    margin-bottom: 20px;
+.summary p {
+    text-align: justify;
 }
 
-.menu-icon {
-    cursor: pointer;
-    font-size: 24px;
-    color: #5ca0f4; /* Lighter blue color */
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.menu-icon:hover {
-    color: #00ccff; /* Lighter blue on hover */
-    transform: rotate(15deg); /* Add rotation effect */
-}
-
-.menu {
-    display: none;
-    transition: max-height 0.5s ease;
-}
-
-input[type="checkbox"]:checked ~ .menu {
-    display: block;
-}
-
-/* Form Styles */
-.form-group {
-    margin-bottom: 15px;
-}
-
-input[type="text"],
-input[type="number"],
-button {
-    width: 90%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #3a7bd5; /* Adjusted blue border */
-    border-radius: 5px;
-    background-color: #1a1a1a; /* Dark input background */
-    color: #e0e0e0; /* Light input text */
-    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.2s ease; /* Add transform effect */
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus {
-    border-color: #5ca0f4; /* Lighter blue border on focus */
-    background-color: #0e0e0e; /* Darker input background on focus */
-    transform: scale(1.02); /* Slightly enlarge input on focus */
-}
-
-button {
-    width: 40%;
-    background-color: #5ca0f4; /* Lighter blue button */
-    color: #fff; /* White text */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #00ccff; /* Lighter blue on hover */
-    transform: translateY(-3px); /* Move button up on hover */
-}
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid #3a7bd5; /* Adjusted blue border */
-    text-align: left;
-    transition: background-color 0.3s ease; /* Add transition effect */
-}
-
-th {
-    background-color: #4a90e2; /* New header color */
-    color: #fff; /* White text */
-}
-
-tr {
-    transition: background-color 0.3s ease;
-}
-
-tr:hover {
-    background-color: rgba(30, 144, 255, 0.3); /* Light blue hover effect */
-}
-
-/* Message and Links */
-#message {
-    color: #ffcc00; /* Yellow for messages */
-    text-align: center;
-    margin: 15px 0;
-    animation: bounce 0.5s infinite alternate; /* Add bounce effect */
-}
-
-a {
-    color: #5ca0f4; /* Lighter blue links */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #00ccff; /* Lighter blue on hover */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Add text shadow on hover */
-}
-
-/* Footer Styles */
 .footer {
+    background-color: #0f0f0f; /* Darker footer */
     text-align: center;
-    margin-top: 20px;
     padding: 10px;
-    border-top: 1px solid #3a7bd5; /* Adjusted blue border */
-    animation: fadeIn 0.5s ease-in; /* Add fade-in effect */
+    border-top: 1px solid #3a7bd5;
+    animation: fadeIn 0.5s ease-in;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -171,22 +103,4 @@ a:hover {
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-5px);
-    }
-}
-
-/* Apply fade-in animation to elements */
-.container,
-.menu-bar,
-.summary,
-.account-details,
-.account-operations {
-    animation: fadeIn 0.5s ease-in;
 }

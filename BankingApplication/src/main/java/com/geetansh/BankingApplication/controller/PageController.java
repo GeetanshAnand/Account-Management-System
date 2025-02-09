@@ -39,5 +39,10 @@ public class PageController {
         // You can add attributes to the model if needed
         return "search-account"; // This serves account-operations.html from the templates folder
     }
+
+    @GetMapping("/home")
+    public String home() {
+        return "home"; // Serve home.html after successful login
+    }
 }
 
